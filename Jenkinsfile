@@ -17,9 +17,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: params.BRANCH, 
-                    credentialsId: 'github-token', 
-                    url: 'https://github.com/arya-devsecops/Jenkins-CI-CD-setup.git'
+                git branch: 'main', credentialsId: 'github-creds', url: 'https://github.com/arya-devsecops/jenkinsdemo.git'
             }
         }
 
